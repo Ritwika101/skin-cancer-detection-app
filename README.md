@@ -1,6 +1,8 @@
 ## Application
 
-This is a flask web application that uses the MobileNetV2 model for classification of images of skin lesions. It has a 83.4% accuracy.
+This is a Flask web application that uses the MobileNetV2 model for classification of images of skin lesions. It has a 83.4% accuracy. 
+<br> I have added the Jupyter notebook which was used to train the model.
+<br> The dataset was taken from International Skin Imaging Collaboration(ISIC).
 
 
 ## To run the source code in your local system then follow the steps below(Windows) : 
