@@ -1,32 +1,22 @@
-To run the source code in your local system then follow the steps below : 
+## Application
 
+This is a flask web application that uses the MobileNetV2 model for classification of images of skin lesions. It has a 83.4% accuracy.
+
+
+## To run the source code in your local system then follow the steps below(Windows) : 
 
 1) Download all the files from git
 
-2) Download Python 3.9.1 from https://www.python.org/downloads/release/python-390/
+2) Download and install Python 3.9.1 from https://www.python.org/downloads/release/python-390/
 
-3) Run the file, check the Add to variables before installation
+3) Open command prompt from start, and run the command python --version to check if it is properly installed.
 
-4) Go to Environmental Vatiables from start
-Double click on path of User variables and add two new paths(Here this is the path in my machine) :
-C:\Users\R i t w i k a\AppData\Local\Programs\Python\Python39\Scripts\
-C:\Users\R i t w i k a\AppData\Local\Programs\Python\Python39
+4) Then run the following commands
 
-Again with System variables add paths :
-C:\Users\R i t w i k a\AppData\Local\Programs\Python\Python39
-
-5) Open command prompt from start, and run the command python --version to check if it is properly installed.
-
-6) Then run the following commands
-
-7) cd <path copied earlier from step 1>
-Eg : cd C:\Users\R i t w i k a\Desktop\WebApp\website
-
-8) To create virtual environment run: python -m venv venv
-9) To activate venv run: venv\Scripts\activate
-10) Install requirements: pip install -r requirements.txt
-11) Setup flask :
-set FLASK_APP=app.py
-flask run
-
-8) Go to http://127.0.0.1:5000/
+5) Go to the main directory where app.py is present, run:  `cd <path>`
+6) To create virtual environment run: `python -m venv venv`
+7) To activate venv run: `venv\Scripts\activate`
+8) Install requirements: `pip install -r requirements.txt`
+9) Setup flask, run:`set FLASK_APP=app.py`
+10) Deploy the app on your local, run: `flask run`
+11) Go to `http://127.0.0.1:5000/`
