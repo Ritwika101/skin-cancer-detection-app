@@ -1,0 +1,113 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=_-dREykf4BIqORm47uVP8S_W_odQFTS8kwXwUEHSsmVcpDvbEKQg9PY7zepP6rwcXP9IciYO9ZaGunWu20w3uutnGqUTtWaAecf7qEcyKBouOf0CjCIdg8czu_bBT8q_E1QV1isArXnRk2Yi2JxCwirHLhXJOn6-ZrIjmU6ssNcXIjAoZQ8WqZmnykMJ3LiM-E-f0t_FGbCTzSSNnbbJLB3kSLOy1FZRUcAuz_unCJ9kOwYw-zcACqpbO0Vdsu1jEJFTMCLR9t4Jzn7uTW9CzT9i9HuMyXkgNtaTaWSRLx43sjTmqhtIv5wKkUdKsesOKKbhzO57Snmn67djekrstf7_jSss_WNXYneUaHszapkewsJuZjYz5URppPqlSYrTaNzCLeLTualOwA3yLawiSKJgMOybcEC5COlOgAU4h5lZftrjEqhmKJohZzX5oHP_xBNnGgzhbSYyTQp8FdmKPhJvplWVf57N7hPhx9Q5TRK9cSroawGvW7dDlXB56zUHhFWggmSWleFFM79TVMZGXeIdLaEcq8tz0hWn401ZsOzsY2w360BWUlru5VBtlQApwc_h0vxrn16Rob__tf2wnxEhbrIu8VdPG1rOu20WP7glXkRmffSIc9dC-uXle-L768G6XppaYutXauyyT8vD8jYI0OegLmmYKA_Irhr4WCTwlz7twD_7t6yw4QIiFB3eUvAmROP3XbVBiL18vKvSPc2Em2_pBJeaQ6VBwSWKOr5I12bLz8IrBwX7JvhuY1z8jvRRJ109RvwV0zOcgetiWTEZfqU6oXmQWw4_luvwS6AndQDK78AsBiU6Dsiwq0Osx_NAae9ZemusyI72iCKUY4TlGRoT5aAZ0IydEMUT38NLCFI-tnN-WWermJ5SQFulCWPpvBqnYoW9T_0RHwZE_Suxtcb9fpv-DNntblTZ62PpezTEmiY7BgCQt9rZ0pfW-f3sOw4pz3kLZA_cS3a3qs_VtIb_QKTw-iOfsJhNMrwrcrnfVQhNi58zpE24vJ5SAN1O2YkVjv0FAqX8r1pCgQVzw8QFuTrRnJ4LXviUATUIGv6iTq5csztlZvCs9Mk4vRDw0dLAyqBKCkzQ3CSbs7q0z9c-mTTZRu98y72yTtrjntBFYw5B9gsPW2k6jUTtgToYusPnrDiHzSjYBGXBqg" nonce="355b90155ab88dd9036d99ba8fb3c4e9" charset="UTF-8"></script><style>
+      #flask1:hover {
+           transition: opacity 0.3s; /* Transition should take 0.3s */
+          -webkit-transition: opacity 0.3s; /* Transition should take 0.3s */
+          opacity: 0.3; 
+      }
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="skincancerdetection" content="Skin caner detection application for free">
+    <meta name="author" content="Ritwika Pal">
+    
+    <title>Skin Cancer Detection Application</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/product/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../static/css/product.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="site-header sticky-top py-1">
+      <div class="container d-flex flex-column flex-md-row justify-content-between">
+       
+        <a class="py-2 d-none d-md-inline-block" href="#">Home</a>
+        <a class="py-2 d-none d-md-inline-block" href="#about_app">Features</a>
+        <a class="py-2 d-none d-md-inline-block" href="#about_developer">About Developer</a>
+        <a class="py-2 d-none d-md-inline-block" href="mailto:pal.ritwika2@gmail.com">Contact Me</a>
+      </div>
+    </nav>
+
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+      <div class="col-md-5 p-lg-5 mx-auto my-5">
+        <h1 class="display-4 font-weight-normal">Skin Cancer Detection</h1>
+        <p class="lead font-weight-normal">Upload a magnified image where the skin lesion is clearly visible to get your predictions now</p>
+        <form name=myForm method=post enctype=multipart/form-data>
+          <input type=file name=image class="form-control" style="margin:auto;width:50%;" required autofocus></input>
+          <br>
+          <button type="submit" class="btn btn-lg btn-primary" style="width:50%;">Predict</button><br>   
+          
+          {% if image_loc %}
+          <br><br><br>
+            <img class="mb-4" src={{image_loc}} alt="" width="256" height="256">
+            <h3 class= "text-muted" style="padding-bottom:5%;"><span class="featurette-heading" style="color:black;"> {{prediction}}</span></h3>
+         
+          {%endif%}
+        </form>
+      </div>
+      <div class="product-device box-shadow d-none d-md-block"></div>
+      <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+    </div>
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3" id="about_app">
+      <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+        <div class="my-3 py-3">
+          <h2 class="display-5">Instantaneous Predictions</h2>
+          <p class="lead">Get instantaneous predictions with the help of image classification</p>
+        </div>
+        <div><img src="../static/predictions.png" id="flask1"  class="bg-light box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+      </div>
+      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <h2 class="display-5">User-Friendly</h2>
+          <p class="lead">Helps the users to take images and see for themselves if the suspicious patch could lead to cancer</p>
+        </div>
+       <div><img src="../static/user_friendly.jpg" id="flask1" class="bg-dark box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+      </div>
+    </div>
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <h2 class="display-5">Enhanced & Powerful tool</h2>
+          <p class="lead">Enables people to leverage the power of Deep learning</p>
+        </div>
+       <div><img  src="../static/dl.jpeg" id="flask1" class="bg-dark box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+      </div>
+      <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+        <div class="my-3 py-3">
+          <h2 class="display-5">Deep Learning</h2>
+          <p class="lead">Deep Learning model has an accuracy score of 83.9%! </p>
+        </div>
+       <div><img src="../static/accuracy1.png" id="flask1" class="bg-light box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+      </div>
+    </div>
+
+   
+
+    <div class="container py-5">
+      <div class="row featurette" id="about_developer">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading" style="padding-top:20%;">About the Developer! <span class="text-muted">Ritwika Pal</span></h2>
+          <p class="lead"> I am a final year CS undergraduate at Kalinga Institute of Industrial Technology.</p>
+          <p><a class="btn btn-primary btn-lg" href="https://www.linkedin.com/in/ritwika-pal-198b48199/" target="_blank" role="button">Learn more &raquo;</a></p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img class="featurette-image img-fluid mx-auto" src="../static/developer.jpg" style="height:95%;width:80%; padding-left:20%;" alt="Generic placeholder image">
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+</html>
